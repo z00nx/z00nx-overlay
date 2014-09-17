@@ -1,0 +1,22 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting PyLoad Daemon"
+		start-stop-daemon --start --quiet \
+		--pidfile ${PIDFILE} \
+		--user $PYLOAD_USER \
+		--exec /usr/bin/pyload -- --configdir=${CONFIGDIR} --daemon -p ${PIDFILE} ${OPTIONS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping PyLoad Daemon"
+		start-stop-daemon --stop --quiet \
+		--user $PYLOAD_USER \
+		--pidfile ${PIDFILE}
+	eend $?
+}

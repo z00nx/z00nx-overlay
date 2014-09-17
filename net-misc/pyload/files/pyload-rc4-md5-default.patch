@@ -1,0 +1,12 @@
+diff --git a/module/network/HTTPRequest.py b/module/network/HTTPRequest.py
+index 4747d93..1e7115b 100644
+--- a/module/network/HTTPRequest.py
++++ b/module/network/HTTPRequest.py
+@@ -79,6 +79,7 @@ class HTTPRequest():
+         if hasattr(pycurl, "AUTOREFERER"):
+             self.c.setopt(pycurl.AUTOREFERER, 1)
+         self.c.setopt(pycurl.SSL_VERIFYPEER, 0)
++        self.c.setopt(pycurl.SSL_CIPHER_LIST, "RC4-MD5:DEFAULT")
+         self.c.setopt(pycurl.LOW_SPEED_TIME, 30)
+         self.c.setopt(pycurl.LOW_SPEED_LIMIT, 5)
+ 

@@ -1,0 +1,5 @@
+# /etc/conf.d/nzbmegasearchd
+
+# Options to pass to nzbmegasearch at startup
+# Default username to run nzbmegasearch
+NZBMEGASEARCH_USER="nzbmegasearch"

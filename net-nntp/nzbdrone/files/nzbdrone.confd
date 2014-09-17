@@ -1,0 +1,5 @@
+# /etc/conf.d/nzbdroned
+
+# Options to pass to nzbdroned at startup
+# Default username to run nzbdroned
+NZBDRONE_USER="nzbdrone"

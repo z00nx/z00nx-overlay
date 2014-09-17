@@ -1,0 +1,28 @@
+#!/sbin/runscript
+
+depend() {
+        need net
+}
+
+start() {
+	ebegin "Starting NZBMegasearch Daemon"
+	start-stop-daemon \
+		--start \
+		--make-pidfile \
+		--pidfile /var/run/nzbmegasearchd.pid \
+		--background \
+		--user $NZBMEGASEARCH_USER \
+		--name nzbmegasearchd \
+		--exec /usr/bin/nzbmegasearch
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping NZBMegasearch Daemon"
+	start-stop-daemon \
+		--stop \
+		--pidfile /var/run/nzbmegasearchd.pid \
+		--user $NZBMEGASEARCH_USER \
+		--signal 15
+	eend $?
+}

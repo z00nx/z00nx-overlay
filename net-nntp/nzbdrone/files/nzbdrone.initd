@@ -1,0 +1,28 @@
+#!/sbin/runscript
+
+depend() {
+        need net
+}
+
+start() {
+	ebegin "Starting NzbDrone Daemon"
+	start-stop-daemon \
+		--start \
+		--make-pidfile \
+		--pidfile /var/run/nzbdroned.pid \
+		--background \
+		--user $NZBDRONE_USER \
+		--name nzbdroned \
+		--exec /usr/bin/nzbdrone
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping NzbDrone Daemon"
+	start-stop-daemon \
+		--stop \
+		--pidfile /var/run/nzbdroned.pid \
+		--user $NZBDRONE_USER \
+		--signal 15
+	eend $?
+}

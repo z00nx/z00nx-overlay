@@ -1,0 +1,9 @@
+#The Name of the daemon process' PID-file
+PIDFILE="/var/lib/pyload/pyload.pid"
+
+#Preset working directory for pyload
+CONFIGDIR="/var/lib/pyload"
+#Additional daemon options you want to use
+PYLOAD_USER="pyload"
+OPTIONS=""
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>z00nx</name>
+    <description lang="en">z00nx's overlay</description>
+    <homepage>https://github.com/z00nx/z00nx-overlay</homepage>
+    <owner type="person">
+      <email>z00nx0@gmail.com</email>
+      <name>z00nx 0</name>
+    </owner>
+    <source type="git">https://github.com/z00nx/z00nx-overlay.git</source>
+    <source type="git">git://github.com/z00nx/z00nx-overlay.git</source>
+    <source type="git">git@github.com:z00nx/z00nx-overlay.git</source>
+    <feed>https://github.com/z00nx/z00nx-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
