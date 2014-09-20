@@ -1,0 +1,34 @@
+#!/sbin/runscript
+
+depend() {
+  need net
+}
+
+start() {
+  ebegin "Starting warrior daemon"
+    start-stop-daemon \
+    --start \
+    --make-pidfile \
+    --pidfile /var/run/warrior.pid \
+    --background \
+    --user $WARRIOR_USER \
+    --name warrior \
+    --exec /usr/bin/run-warrior -- \
+    --projects-dir $PROJECTS_DIR \
+    --data-dir $DATA_DIR \
+    --warrior-hq $WARRIOR_HQ \
+    --address $ADDRESS \
+    --port $PORT \
+    $WARRIOR_ARGS
+  eend $?
+}
+
+stop() {
+  ebegin "Stopping warrior daemon"
+  start-stop-daemon \
+    --stop \
+    --pidfile /var/run/warrior.pid \
+    --user $NZBDRONE_USER \
+    --signal 15
+  eend $?
+  }

@@ -1,0 +1,10 @@
+# /etc/conf.d/warrior
+
+# Options to pass to warrior at startup
+WARRIOR_USER="warrior"
+PROJECTS_DIR="/var/lib/warrior"
+DATA_DIR="/var/lib/warrior"
+WARRIOR_HQ="http://warriorhq.archiveteam.org"
+ADDRESS="0.0.0.0"
+PORT="8001"
+WARRIOR_ARGS=""
