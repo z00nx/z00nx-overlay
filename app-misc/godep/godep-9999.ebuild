@@ -31,4 +31,5 @@ src_compile() {
 
 src_install() {
 	dobin ${S}/godep
+	dodoc ${S}/src/github.com/tools/godep/Readme.md
 }
