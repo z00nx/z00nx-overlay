@@ -10,7 +10,7 @@ EGIT_REPO_URI="https://github.com/tools/godep.git"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-lang/go"
