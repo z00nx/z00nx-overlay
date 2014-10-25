@@ -19,6 +19,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/pytz[${PYTHON_USEDEP}]
 		dev-python/tzlocal[${PYTHON_USEDEP}]
 		dev-python/six[${PYTHON_USEDEP}]
+		virtual/python-futures[${PYTHON_USEDEP}]
 		test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
 RDEPEND="${DEPEND}"
