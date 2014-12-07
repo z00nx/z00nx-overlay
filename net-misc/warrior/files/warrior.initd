@@ -28,7 +28,7 @@ stop() {
   start-stop-daemon \
     --stop \
     --pidfile /var/run/warrior.pid \
-    --user $NZBDRONE_USER \
+    --user $WARRIOR_USER \
     --signal 15
   eend $?
   }
