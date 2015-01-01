@@ -12,8 +12,9 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="net-misc/wget-lua
-		dev-python/seesaw
-		app-admin/sudo"
+        dev-python/seesaw
+        app-admin/sudo
+        dev-python/requests"
 RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
