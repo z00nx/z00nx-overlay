@@ -29,5 +29,5 @@ src_install() {
 	newconfd "${FILESDIR}"/warrior.confd warrior
 	insinto /etc/sudoers.d/
 	insopts -m 0600 -o root -g root
-	doins "${FILESDIR}/warrior.sudoers"
+	doins "${FILESDIR}/warrior-sudoers"
 }
