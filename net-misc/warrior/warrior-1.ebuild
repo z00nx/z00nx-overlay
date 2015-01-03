@@ -14,7 +14,8 @@ IUSE=""
 DEPEND="net-misc/wget-lua
         dev-python/seesaw
         app-admin/sudo
-        dev-python/requests"
+        dev-python/requests
+        dev-python/pip"
 RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
