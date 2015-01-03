@@ -27,4 +27,7 @@ pkg_setup() {
 src_install() {
 	newinitd "${FILESDIR}"/warrior.initd warrior
 	newconfd "${FILESDIR}"/warrior.confd warrior
+	insinto /etc/sudoers.d/
+	insopts -m 0600 -o root -g root
+	doins "${FILESDIR}/warrior.sudoers"
 }

@@ -1,0 +1,3 @@
+Defaults:warrior !requiretty
+
+warrior ALL = (root) NOPASSWD: /usr/bin/pip
