@@ -1,0 +1,19 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+	after logger
+}
+
+start() {
+	ebegin "Starting Splunk"
+	/opt/splunk/bin/splunk start
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Splunk"
+	/opt/splunk/bin/splunk stop
+	eend $?
+}
