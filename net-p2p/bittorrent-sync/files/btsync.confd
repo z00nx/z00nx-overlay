@@ -1,0 +1,7 @@
+BIN="/usr/bin/btsync"
+PIDFILE="/var/run/btsync.pid"
+CONFIG="/etc/btsync/config"
+BTSYNC_HOME="/var/lib/btsync"
+USER="root"
+GROUP="root"
+WEBUI_LISTEN="0.0.0.0:8888"

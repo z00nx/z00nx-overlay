@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+depend() {
+  need net
+}
+
+start() {
+  ebegin "Starting BitTorrent Sync"
+  start-stop-daemon --start --exec ${BIN} --pidfile ${PIDFILE} --user ${USER} \
+    --group ${GROUP} --background --chdir ${BTSYNC_HOME} -- --nodaemon \
+    --config ${CONFIG} --webui.listen ${WEBUI_LISTEN}
+  eend $?
+}
+
+stop() {
+  ebegin "Stopping BitTorrent Sync"
+  start-stop-daemon --stop --pidfile ${PIDFILE}
+  eend $?
+}
+
+reload() {
+  ebegin "Reloading BitTorrent Sync"
+  start-stop-daemon --signal HUP --pidfile ${PIDFILE}
+  eend $?
+}
