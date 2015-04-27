@@ -40,7 +40,8 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/jellyfish[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/${MY_P}
 
