@@ -35,7 +35,7 @@ RDEPEND="
 	doc? ( dev-python/sphinx )
 	echonest_tempo? ( dev-python/pyechonest[${PYTHON_USEDEP}] )
 	lastgenre? ( dev-python/pylast[${PYTHON_USEDEP}] )
-	thumbnails? ( virtual/python-pathlib[${PYTHON_USEDEP}] dev-python/pyxdg[${PYTHON_USEDEP}] )
+	thumbnails? ( virtual/python-pathlib[${PYTHON_USEDEP}] dev-python/pyxdg[${PYTHON_USEDEP}] virtual/python-imaging[${PYTHON_USEDEP}] )
 	replaygain? ( || ( media-sound/mp3gain media-sound/aacgain ) )
 	web? ( dev-python/flask[${PYTHON_USEDEP}] )
 "
