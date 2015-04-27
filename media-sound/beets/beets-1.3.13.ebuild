@@ -19,7 +19,7 @@ HOMEPAGE="http://beets.radbox.org/ http://pypi.python.org/pypi/beets"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="MIT"
-IUSE="beatport bpd chroma convert doc discogs echonest_tempo lastgenre replaygain test web"
+IUSE="beatport bpd chroma convert doc discogs echonest_tempo lastgenre replaygain test thumbnails web"
 
 RDEPEND="
 	dev-python/munkres[${PYTHON_USEDEP}]
@@ -35,6 +35,7 @@ RDEPEND="
 	doc? ( dev-python/sphinx )
 	echonest_tempo? ( dev-python/pyechonest[${PYTHON_USEDEP}] )
 	lastgenre? ( dev-python/pylast[${PYTHON_USEDEP}] )
+	thumbnails? ( dev-python/pathlib[${PYTHON_USEDEP}] )
 	replaygain? ( || ( media-sound/mp3gain media-sound/aacgain ) )
 	web? ( dev-python/flask[${PYTHON_USEDEP}] )
 "
@@ -48,7 +49,7 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	# remove plugins that do not have appropriate dependencies installed
 	for flag in beatport bpd chroma convert discogs echonest_tempo lastgenre \
-				replaygain web;do
+				replaygain thumbnails web;do
 		if ! use $flag ; then
 			rm -r beetsplug/$flag* || \
 				die "Unable to remove $flag plugin"
