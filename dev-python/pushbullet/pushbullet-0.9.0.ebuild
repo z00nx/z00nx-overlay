@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4,3_5} )
 MY_PN="${PN}.py"
 inherit distutils-r1
 
