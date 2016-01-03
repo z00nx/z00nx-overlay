@@ -17,6 +17,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-python/python-magic
-		dev-python/requests"
+		dev-python/requests
+		dev-python/websocket-client"
 RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_PN}-${PV}
