@@ -5,16 +5,16 @@
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1
+inherit distutils-r1 git-2
 
 DESCRIPTION="binjitsu is a CTF framework and exploit development library. Written in Python, it is designed for rapid prototyping and development, and intended to make exploit writing as simple as possible."
 HOMEPAGE="https://github.com/binjitsu/binjitsu/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+EGIT_REPO_URI="https://github.com/binjitsu/binjitsu.git"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="test"
 
 DEPEND=">=dev-python/paramiko-1.15.2
 	>=dev-python/mako-1.0.0
