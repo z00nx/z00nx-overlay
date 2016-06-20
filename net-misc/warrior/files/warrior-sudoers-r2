@@ -1,0 +1,4 @@
+Defaults:warrior !requiretty
+
+warrior ALL=(ALL) NOPASSWD: /usr/bin/pip freeze
+warrior ALL=(ALL) NOPASSWD: /usr/bin/pip3 freeze
